@@ -32,3 +32,13 @@ def find_a_tag(tag, url = 'https://en.wikipedia.org/wiki/Asgardia'):
         print('There was no match')
 
 find_a_tag(tag = input("Please enter a tag you would like to search: "))
+
+
+def get_url():
+    url = input("What website would you like to search for tags?: ")
+    tag = input("What tag in the website would you like to get printed?: ")
+    return url, tag
+
+def find_a_correct_tag():
+    pass
+    #return tag
