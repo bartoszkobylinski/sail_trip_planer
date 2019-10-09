@@ -75,7 +75,7 @@ def extract_links(soup):
                 if not pattern1.search(a['href']):
                     if not pattern2.search(a['href']):
                         links_list.append('https://en.wikipedia.org'+ a['href'])
-        return links_list
+        return list(set(links_list))
     except Exception as e:
         log_exception(e)
         print("Soup file's problem. Check a logger for further information.")
@@ -145,5 +145,5 @@ def main_program(counter):
 #main_program(0)
 a = extract_links(parse_website(get_url_from_user(0)))
 print(len(a))
-a = list(set(a))
+
 print(len(a))
