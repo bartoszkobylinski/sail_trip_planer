@@ -109,30 +109,21 @@ def get_data_point():
         data_list.append(day)
     return data_list     
 
-def extract_data_point(data_list):
-    data_point = []
-    for string_line in data_list:
-        string_line = string_line.split(' ')
-        # deleting empty string throug list comprehension
-        string_line = [x for x in string_line if x]
-        headers = ['time_stamp','windspeed','gaust','wind_direction','wave','wavepeak','wavedirection','periods']
-        fixed_data = dict(zip(headers,string_line))
-        data_point.append(fixed_data)
-    return data_point
 
-       
-            
-    
+def main():
+    pass   
+
+#Chrome instalation function to do
+
 login_user(user,password)
 navigate_to_point(latitude,longitude)
 #make_database()
-
-#a = get_data_point()
-#print(a)
-
+#function to making database has to be added
 a = extract_data(get_data_point())
-print(type(a))
-print(a)
+#function to inserting to database
+#function to shedulle job
+#install flask
+
 
 
 
