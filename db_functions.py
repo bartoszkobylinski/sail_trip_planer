@@ -33,9 +33,7 @@ def insert_data_to_database(dictionary,point):
     cursor = database_connection.cursor()
     cursor.execute("SELECT Points, Dates, Dayquaters from Conditions WHERE Points=? AND Dates=? AND Dayquaters=?",(point, dictionary['Dates'],dictionary['Dayquaters']))
     result = cursor.fetchone()
-    if result:
-        print("I have found match!")
-    else:
+    if not result:
         cursor.execute("INSERT INTO Conditions VALUES (?,?,?,?,?,?,?,?,?,?)",
         [point,
         dictionary['Dates'],
