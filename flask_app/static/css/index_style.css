@@ -1,0 +1,35 @@
+body{
+    height: 100%;
+}
+.content{
+   margin: 0 auto;
+   width: 600px;
+
+}
+h2{
+    margin: 20px auto;
+    width: auto;
+    text-align: center;
+    color:red;
+    font-size: 20px;
+}
+ul{
+    margin: 20px auto;
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    color:red;
+    font-size: 12px; 
+}
+thead{
+    padding: 10px;
+    border: solid 1px black;
+    font-size: 12px;
+}
+
+td,th{
+    padding: 5px;
+    border: solid 1px black;
+    font-size: 12px;
+    text-align: center;
+}

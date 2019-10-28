@@ -5,31 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
 </head>
 <body>
-    <h2>Here you can watch statistic conditions which are on specific coordinates at see. Coordinates are set to travel by sailboat from Oslo to Swinoujscie!</h2>
-    <table>
-        <thead>
-            <th>Point</th>
-            <th>Dates</th>
-            <th>Dayquaters</th>
-            <th>Wind speed</th>
-            <th>Gust</th>
-            <th>Wind direction</th>
-            <th>Wave</th>
-            <th>Wave peak</th>
-            <th>Wave direction</th>
-            <th>Periods</th>
-        </thead>
-        <tbody>
-            {% for row in rows %}
-            <tr>
-                {% for item in row %}
-                <td>{{ item }}</td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </tbody>               
-    </table>
+    <h2>Here you can see conditions which are on specific coordinates at see. <br>
+            Coordinates are set to travel by sailboat from Oslo to Swinoujscie!
+    </h2>
+    <ul>
+        <li>1 - latitude: 59.50, longitude: 10.50</li>
+        <li>2 - latitude: 59.15, longitude: 10.65</li>
+        <li>3 - latitude: 58.30, longitude: 10.75</li>
+        <li>4 - latitude: 57.40, longitude: 11.40</li>
+        <li>5 - latitude: 56.30, longitude: 12.25</li>
+        <li>6 - latitude: 55.39, longitude: 13.00</li>
+        <li>7 - latitude: 54.80, longitude: 13.90</li>
+        <li>8 - latitude: 54.30, longitude: 14.35</li>
+    </ul>
+    <div class="content">
+            <table>
+                <thead>
+                    <th>Point</th>
+                    <th>Dates</th>
+                    <th>Dayquaters</th>
+                    <th>Wind speed</th>
+                    <th>Gust</th>
+                    <th>Wind direction</th>
+                    <th>Wave</th>
+                    <th>Wave peak</th>
+                    <th>Wave direction</th>
+                    <th>Periods</th>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                    <tr>
+                        {% for item in row %}
+                        <td>{{ item }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>               
+            </table>
+    </div>
 </body>
 </html>
