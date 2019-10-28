@@ -1,6 +1,5 @@
 
-
-def delete_day_name(temp_string):
+def deleteDayName(temp_string):
     # Checking if first element in list is a day name
 
     days =['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
@@ -11,15 +10,15 @@ def delete_day_name(temp_string):
         else:
             return temp_string
 
-def check_first_elem_in_list(splited_list, date):
+def checkFirstElemInList(splited_list, date):
     # Checking if given date is first element in given data list
-    if check_if_elem_is_date(splited_list[0]):
+    if checkIfElemIsDate(splited_list[0]):
         return splited_list
     else:
         splited_list.insert(0, date)
         return splited_list
 
-def check_if_elem_is_date(elem):
+def checkIfElemIsDate(elem):
     # Checking if given element is a date element in format 'nn/nn' where n is number
     trigger = 0
     # checking if elem contain '/' sign
@@ -31,25 +30,26 @@ def check_if_elem_is_date(elem):
     if trigger > 0:
         return True
 
-def extract_data(data):
+def extractData(data):
+    # function which extracting data to list of dictionaries collected from website
     # changing to string
     joined_list = ' '.join(data)
-    # spliting by spaces
+    # spliting by spaces on lists
     splited_list = joined_list.split(" ")
-    # cleaning empty lists
+    # because some element had two spaces we have to remove lists contains just spaces
     splited_list = [x for x in splited_list if x]
     # removing first element in list
     splited_list = splited_list[1:]
     date = splited_list[1]
     extracted_data_list = []
     while len(splited_list) > 8:
-        headers = ['date','time_stamp','windspeed','gaust','wind_direction','wave','wavepeak','wavedirection','periods']
-        splited_list = delete_day_name(splited_list)
-        if check_first_elem_in_list(splited_list,date):
+        headers = ['Dates','Dayquaters','Windspeed','Gust','Winddirection','Wave','Wavepeak','Wavedirection','Periods']
+        splited_list = deleteDayName(splited_list)
+        if checkFirstElemInList(splited_list, date):
             date = splited_list[0]
         else:
             date = date
-        splited_list = check_first_elem_in_list(splited_list,date)
+        splited_list = checkFirstElemInList(splited_list,date)
         temp_data = splited_list[:9]
         one_record = dict(zip(headers,temp_data))
         extracted_data_list.append(one_record)
@@ -58,4 +58,3 @@ def extract_data(data):
     return extracted_data_list
 
   
-

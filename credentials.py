@@ -1,0 +1,1 @@
+credentials = {'user': 'billboard@interia.pl', 'password': 'barbara'}

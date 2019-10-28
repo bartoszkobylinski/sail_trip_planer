@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Here you can watch statistic conditions which are on specific coordinates at see. Coordinates are set to travel by sailboat from Oslo to Swinoujscie!</h2>
+    
+    <table>
+            
+        <thead>
+            <th>Point</th>
+            <th>Dates</th>
+            <th>Dayquaters</th>
+            <th>Wind speed</th>
+            <th>Gust</th>
+            <th>Wind direction</th>
+            <th>Wave</th>
+            <th>Wave peak</th>
+            <th>Wave direction</th>
+            <th>Periods</th>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                {% for item in row %}
+                <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>               
+    </table>
+
+</body>
+</html>
