@@ -1,9 +1,10 @@
-import sqlite3
 import logging
+import sqlite3
 
 from points import points
 
-def makeDatabase():
+
+def make_database():
     database_connection = sqlite3.connect('weather.db')
     database_connection.execute("DROP TABLE IF EXISTS Conditions")
     database_connection.commit()
@@ -26,7 +27,7 @@ def makeDatabase():
     except sqlite3.OperationalError as error:
         logging.warning(error)
 
-def insertDataToDatabase(dictionary,point):
+def insert_data_to_database(dictionary,point):
     # Inserting a data to a database from given dictionary
     database_connection = sqlite3.connect('weather.db')
     cursor = database_connection.cursor()
@@ -50,7 +51,7 @@ def insertDataToDatabase(dictionary,point):
     database_connection.commit()
     cursor.close()
 
-def getDataFromDatabase():
+def get_data_from_database():
     database_connection = sqlite3.connect('weather.db')
     cursor = database_connection.cursor()
     cursor.execute("SELECT * FROM Conditions")
