@@ -1,4 +1,5 @@
 temp.py
 archiwum.sqlite
-credentials
+credentials.py
 __pycache__
+weather.db
