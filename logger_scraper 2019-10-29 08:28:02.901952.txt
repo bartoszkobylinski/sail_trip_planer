@@ -1,0 +1,22 @@
+INFO:schedule:Running job Every 5 minutes do job() (last run: [never], next run: 2019-10-29 08:33:09)
+WARNING:root:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/div/section/div/a[1]"}
+  (Session info: chrome=78.0.3904.70)
+
+WARNING:root:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/div/section/div/a[1]"}
+  (Session info: chrome=78.0.3904.70)
+
+WARNING:root:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/div/section/div/a[1]"}
+  (Session info: chrome=78.0.3904.70)
+
+WARNING:root:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/div/section/div/a[1]"}
+  (Session info: chrome=78.0.3904.70)
+
+WARNING:root:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/div/section/div/a[1]"}
+  (Session info: chrome=78.0.3904.70)
+
+WARNING:root:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/div/section/div/a[1]"}
+  (Session info: chrome=78.0.3904.70)
+
+WARNING:root:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/div/section/div/a[1]"}
+  (Session info: chrome=78.0.3904.70)
+
