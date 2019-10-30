@@ -3,3 +3,4 @@ archiwum.sqlite
 credentials.py
 __pycache__
 weather.db
+chromedriver
